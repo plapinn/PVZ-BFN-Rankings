@@ -1,0 +1,105 @@
+/* Ensure you are using the correct file name */
+img {
+    border-radius: 25%;
+    height: 90%; /* Make the image height 75% of the container (100% right now) */
+    width: auto; /* Automatically adjust width to maintain aspect ratio */
+    display: block; /* Ensure the image is treated as a block element */
+}
+
+.container {
+    display: flex; /* Align children horizontally */
+    align-items: center; /* Vertically center the items within the container */
+    margin-bottom: 10px; /* Space between tier containers */
+}
+
+#S_TIER, #A_TIER, #B_TIER, #C_TIER, #D_TIER, #UNUSED_TIER {
+    font-family: "Oswald", Helvetica, sans-serif;
+    font-size: 35px;
+    border: 4px solid; /* Black border */
+    width: 163px; /* 30% + 5% + 2% smaller */
+    height: 131px; /* 30% + 5% + 2% smaller */
+    position: relative;
+    overflow: hidden; /* Ensures child elements do not overflow */
+    z-index: 10;
+}
+
+#S_TIER .S_TIER-BACKGROUND_COLOR,
+#A_TIER .TIER-BACKGROUND_COLOR,
+#B_TIER .TIER-BACKGROUND_COLOR,
+#C_TIER .TIER-BACKGROUND_COLOR,
+#D_TIER .TIER-BACKGROUND_COLOR,
+#UNUSED_TIER .TIER-BACKGROUND_COLOR {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#S_TIER .S_TIER-BACKGROUND_COLOR {
+    background-color: #FF474D; /* Red color */
+}
+
+#A_TIER .TIER-BACKGROUND_COLOR {
+    background-color: #FFFF00; /* Yellow color */
+}
+
+#B_TIER .TIER-BACKGROUND_COLOR {
+    background-color: #00FF00; /* Green color */
+}
+
+#C_TIER .TIER-BACKGROUND_COLOR {
+    background-color: #87CEEB; /* Slightly darker blue color */
+}
+
+#D_TIER .TIER-BACKGROUND_COLOR {
+    background-color: #8B4513; /* Brown color */
+}
+
+#UNUSED_TIER .TIER-BACKGROUND_COLOR {
+    background-color: #FFFFFF; /* White color */
+}
+
+#S_TIER .S_TIER-LETTER,
+#A_TIER .TIER-BACKGROUND_COLOR,
+#B_TIER .TIER-BACKGROUND_COLOR,
+#C_TIER .TIER-BACKGROUND_COLOR,
+#D_TIER .TIER-BACKGROUND_COLOR,
+#UNUSED_TIER .TIER-BACKGROUND_COLOR {
+    font-size: 60px; /* Adjusted for smaller box size */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.gray-space {
+    background-color: #D3D3D3; /* Light gray color */
+    border: 4px solid; /* Black border */
+    flex: 1; /* Take up remaining space */
+    height: 131px; /* Match height of tiers */
+    margin-right: 30px; /* Adjust margin for smaller size */
+    box-sizing: border-box; /* Include border in element’s total width and height */
+    display: flex; /* Align images horizontally */
+    align-items: center; /* Vertically center the images */
+    padding-left: 10px; /* Optional: Adds some space from the left edge */
+    overflow: hidden; /* Prevents overflow if images are too large */
+}
+
+.gray-space img {
+    margin-right: 30px; /* Space between images */
+}
+
+/* Remove the margin from the last image to avoid extra space on the right */
+.gray-space img:last-of-type {
+    margin-right: 0;
+}
+
+
